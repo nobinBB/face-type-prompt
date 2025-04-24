@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>髪型リスト</title>
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Face Type <span class="big-text">Prompt</span>
+    </h1>
+    <p class="dis-text">髪型など各画像やボタンをクリックして一番下になる「Generate」をクリックするとプロンプト出力します。</p>
+    <p class="dis-text">画像は参考程度です。</p>
+    <div id="categories"></div>
+    <div id="eyebrows-container"></div>
+    <div class="generate-section">
+        <button id="generateBtn">Generate</button>
+        <div class="code-container">
+            <pre><code id="output"></code></pre>
+            <button class="copy-btn">Copy</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

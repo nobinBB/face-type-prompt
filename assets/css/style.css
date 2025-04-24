@@ -1,0 +1,229 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+h1{
+    font-size: 2.5em;
+    margin: 20px 0;
+    font-size: 32px;
+}
+.big-text{
+    font-size: 48px;
+}
+.dis-text{
+    padding: 0 5%;
+}
+
+.category {
+    margin: 20px 0;
+}
+
+.list {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+}
+
+.button.selected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.generate-section {
+    margin-top: 20px;
+    margin: 20px auto 8%;
+    text-align: center;
+    max-width: 1280px;
+    width: 90%;
+    
+}
+
+#output {
+    width: 80%;
+    height: 100px;
+    margin: 10px auto;
+    padding: 10px 0 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    resize: none;
+}
+
+#generateBtn, #copyBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#generateBtn:hover, #copyBtn:hover {
+    background-color: #0056b3;
+}
+
+/* コード表示エリアのスタイル */
+.code-container {
+    position: relative;
+    background-color: #282c34; /* 黒背景 */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 4%;
+    text-align: left;
+    color: #fff; /* 白文字 */
+    font-family: monospace; /* 等幅フォントでコードっぽく */
+}
+
+/* Copyボタンのスタイル */
+.copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF; /* 青いボタン */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Copyボタンのホバー時 */
+.copy-btn:hover {
+    background-color: #0056b3; /* 濃い青 */
+}
+
+/* Copied!の表示 */
+.copy-btn.copied::after {
+    content: "Copied!";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #28a745; /* 緑背景 */
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: white;
+}
+
+/* カテゴリ全体のスタイル */
+.category {
+    margin-bottom: 20px;
+}
+
+/* 眉毛のタイプ用（画像表示） */
+.eyebrow-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* 横スクロールを有効に */
+}
+
+/* 眉毛のアイテム */
+.eyebrow-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* その他のカテゴリ用（横スクロールリスト） */
+. {
+    display: flex;
+    overflow-x: auto; /* 横スクロールを有効に */
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+/* スクロールバーのカスタマイズ */
+.scroll-list::-webkit-scrollbar,
+.eyebrow-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-list::-webkit-scrollbar-thumb,
+.eyebrow-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+/* ボタンのスタイル */
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+.button.selected {
+    background-color: #4CAF50; /* 選択時に緑色に */
+    color: white;
+}
+
+img.image {
+    width: 300px;
+    border-radius: 4px;
+}
+@media (max-width: 768px) {
+    img.image {
+    width: 150px;
+}
+}
+
+.image-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.scroll-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.image-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.image-item.selected .button {
+    background-color: #4CAF50; /* 選択時の背景色（例: 緑） */
+    color: white; /* 文字色を白に */
+}
+h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;                   
+    color: #333;                        
+    margin: 20px 0;                  
+    padding-bottom: 10px;               
+    border-bottom: 1px solid #ccc;     
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+    letter-spacing: 0.5px;              
+}
+

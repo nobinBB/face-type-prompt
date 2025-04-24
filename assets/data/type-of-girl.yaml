@@ -1,0 +1,229 @@
+type-of-girl－女性のタイプ:
+  髪型:
+      - bob cut
+      - inverted bob
+      - bowl cut
+      - crew cut
+      - flattop
+      - pixie cut
+      - undercut
+      - wolf cut
+      - hime cut
+      - mullet
+      - bantu knots
+      - bow-shaped hair
+      - braided bangs
+      - front braid
+      - side braid
+      - french braid
+      - cornrows
+      - dreadlocks
+      - single braid
+      - multiple braids
+      - twin braids
+      - low twin braids
+      - tri braids
+      - quad braids
+      - flower-shaped hair
+      - hair bun
+      - braided bun
+      - single hair bun
+      - double bun
+      - cone hair bun
+      - doughnut hair bun
+      - heart hair bun
+      - triple bun
+      - cone hair bun
+      - hair rings
+      - single hair ring
+      - half updo
+      - half up braid
+      - half up half down braid
+      - one side up
+      - two side up
+      - low-braided long hair
+      - low-tied long hair
+      - mizura
+      - multi-tied hair
+      - nihongami
+      - ponytail
+      - folded ponytail
+      - front ponytail
+      - high ponytail
+      - short ponytail
+      - side ponytail
+      - split ponytail
+      - star-shaped hair
+      - topknot
+      - twintails
+      - low twintails
+      - short twintails
+      - uneven twintails
+      - tri tails
+      - quad tails
+      - twisted hair
+      - beehive hairdo
+      - quiff
+      - asymmetrical hair
+      - sidecut
+  髪の色:
+      - aqua hair
+      - black hair
+      - blonde hair
+      - blue hair
+      - light blue hair
+      - dark blue hair
+      - green hair
+      - dark green hair
+      - grey hair
+      - orange hair
+      - pink hair
+      - purple hair
+      - light purple hair
+      - red hair
+  眉毛のタイプ:
+      - eyebrows 
+      - raised eyebrow 
+      - cocked eyebrow 
+      - raised inner eyebrows 
+      - forked eyebrows 
+      - short eyebrows 
+      - thick eyebrows 
+      - huge eyebrows 
+      - v-shaped eyebrows 
+      - furrowed brow 
+      - eyebrows hidden by hair 
+      - hikimay
+      - arched eyebrows 
+      - straight eyebrows 
+  eyes-目のタイプ:
+      - big eyes
+      - small eyes
+      - narrow eyes
+      - wide eyes
+      - almond eyes
+      - slanted eyes
+      - round eyes
+      - sharp eyes
+      - soft eyes
+      - tired eyes
+      - half closed eyes
+      - closed eyes
+      - one eye closed
+      - dragon eyes
+      - glowing eyes
+      - heterochromia
+      - hidden eyes
+      - shadowed eyes
+      - sparkling eyes
+      - teary eyes
+      - bloodshot eyes
+      - droopy eyes
+  pupils-瞳のタイプ:
+      - star pupils
+      - heart pupils
+      - cross pupils
+      - spiral pupils
+      - cat pupils
+      - fox pupils
+      - snake pupils
+      - dragon pupils
+      - glowing pupils
+      - hollow pupils
+      - slit pupils
+      - round pupils
+      - vertical pupils
+      - horizontal pupils
+      - diamond shaped pupils
+      - no pupils
+      - black pupils
+      - white pupils
+      - colored pupils
+      - dilated pupils
+      - constricted pupils
+  目の色:
+       - hazel eyes
+       - green eyes
+       - brown eyes
+       - black eyes
+       - grey eyes
+       - purple eyes
+       - pink eyes
+       - red eyes
+       - silver eyes
+       - yellow eyes
+       - Sapphire eyes
+       - turquoise eyes
+       - amethyst eyes
+       - aquamarine eyes
+       - ruby eyes
+       - peach eyes
+       - gold eyes
+       - jade eyes
+       - teal eyes
+       - blue eyes
+       - light blue eyes
+       - blue eyes
+       - grey-blue eyes
+       - amber eyes
+  鼻のタイプ:
+      - button nose
+      - flat nose
+      - long nose
+      - short nose
+      - upturned nose
+      - pointed nose
+      - wide nose
+      - narrow nose
+      - crooked nose
+      - hooked nose
+      - bulbous nose
+      - aquiline_nose
+      - big_nose
+      - clown_nose
+      - dot_nose
+      - pointy_nose
+  口のタイプ:
+      - big mouth
+      - small mouth
+      - wide mouth
+      - thin lips
+      - full lips
+      - pouty lips
+      - heart-shaped lips
+      - thin upper lip
+      - thin lower lip
+      - thick upper lip
+      - thick lower lip
+      - crooked mouth
+      - fanged mouth
+      - sharp teeth
+      - buck teeth
+      - vampire fangs
+      - sharp fangs
+  face-顔全体のタイプ:
+      - round face
+      - oval face
+      - long face
+      - square face
+      - heart shaped face
+      - chubby face
+      - thin face
+      - sharp face
+      - baby face
+      - mature face
+      - delicate face
+      - refined face
+      - elegant face
+      - cute face
+      - beautiful face
+      - pretty face
+      - handsome face
+      - stern face
+      - gentle face
+      - calm face
+      - fierce face
+      - soft face
+      - strong face
+      - youthful face
+      - aged face
