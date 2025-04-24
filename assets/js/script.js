@@ -30,16 +30,16 @@ async function displayCategories() {
 
         // 画像を表示するカテゴリを指定
         const imageCategories = {
-            '髪型': '/assets/img/hair-style/',
-            '眉毛のタイプ': '/assets/img/eyebrows/',
-            'eyes-目のタイプ': '/assets/img/eye-type/',
-            '髪の色': '/assets/img/hair-color/',
-            'pupils-瞳のタイプ': '/assets/img/pupils/',
-            '瞳のタイプ': '/assets/img/eye-type/',
-            '目の色': '/assets/img/eye-color/',
-            '鼻のタイプ': '/assets/img/nose/',
-            '口のタイプ': '/assets/img/mouth/',
-            'face-顔全体のタイプ': '/assets/img/face-type/',
+            '髪型': './assets/img/hair-style/',
+            '眉毛のタイプ': './assets/img/eyebrows/',
+            'eyes-目のタイプ': './assets/img/eye-type/',
+            '髪の色': './assets/img/hair-color/',
+            'pupils-瞳のタイプ': './assets/img/pupils/',
+            '瞳のタイプ': './assets/img/eye-type/',
+            '目の色': './assets/img/eye-color/',
+            '鼻のタイプ': './assets/img/nose/',
+            '口のタイプ': './assets/img/mouth/',
+            'face-顔全体のタイプ': './assets/img/face-type/',
         };
 
         if (imageCategories[category]) {
