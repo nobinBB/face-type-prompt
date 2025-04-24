@@ -4,7 +4,7 @@ const selectedWords = {};
 // YAMLファイルの読み込み
 async function loadYaml() {
     try {
-        const response = await fetch('/assets/data/type-of-girl.yaml');
+        const response = await fetch('./assets/data/type-of-girl.yaml');
         const text = await response.text();
         const data = jsyaml.load(text);
         return data['type-of-girl－女性のタイプ'] || {};
