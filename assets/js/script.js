@@ -40,6 +40,7 @@ async function displayCategories() {
             '鼻のタイプ': './assets/img/nose/',
             '口のタイプ': './assets/img/mouth/',
             'face-顔全体のタイプ': './assets/img/face-type/',
+            '表情': './assets/img/expression/',
         };
 
         if (imageCategories[category]) {
@@ -54,7 +55,7 @@ async function displayCategories() {
 
                 const img = document.createElement('img');
                 img.className = 'image';
-                img.src = `${imageCategories[category]}${item}.png`;
+                img.src = `${imageCategories[category]}${item}.webp`;
                 img.alt = item;
 
                 const button = document.createElement('button');
@@ -97,12 +98,18 @@ function selectWord(category, word, element) {
     const categoryDiv = element.closest('.category');
     const selectedElements = categoryDiv.querySelectorAll('.selected');
 
-    // 以前の選択を解除
-    selectedElements.forEach(el => el.classList.remove('selected'));
+    // 既に選択されている要素をクリックした場合、選択を解除
+    if (element.classList.contains('selected')) {
+        element.classList.remove('selected'); // 選択解除
+        delete selectedWords[category]; // selectedWordsから該当カテゴリの値を削除
+    } else {
+        // 以前の選択を解除
+        selectedElements.forEach(el => el.classList.remove('selected'));
 
-    // クリックされた要素に selected クラスを追加
-    element.classList.add('selected');
-    selectedWords[category] = word; // 選択された単語を保存
+        // クリックされた要素に selected クラスを追加
+        element.classList.add('selected');
+        selectedWords[category] = word; // 選択された単語を保存
+    }
 }
 
 // Generateボタンの処理

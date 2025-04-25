@@ -1,19 +1,96 @@
-body {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 800;
-    text-align: center;
-}
-h1{
-    font-size: 2.5em;
-    margin: 20px 0;
-    font-size: 32px;
-}
-.big-text{
-    font-size: 48px;
-}
-.dis-text{
-    padding: 0 5%;
-}
+:root{
+    /* Light theme */
+    --bg:          #ffffff;
+    --fg:          #1a1a1a;
+    --primary:     #6366f1;
+    --primary-hov: #4f46e5;
+    --accent-ok:   #10b981;
+    --neutral:     #f3f4f6;
+    --neutral-brd: #e5e7eb;
+    --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  
+    --radius: 1rem;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111827;
+      --fg:#f9fafb;
+      --neutral:#1f2937;
+      --neutral-brd:#374151;
+    }
+  }
+  
+  html{color-scheme:light dark;}
+  
+  /* =========  1. Base  ========= */
+  *,
+  *::before,
+  *::after{box-sizing:border-box;}
+  
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:"DM Sans", "Noto Sans JP", system-ui, sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    text-align:center;
+    transition: background-color 0.3s ease;
+  }
+  
+  :focus-visible{
+    outline:2px solid var(--primary);
+    outline-offset:2px;
+  }
+  
+  /* =========  2. Typography  ========= */
+  h1{
+    font-size:2rem;
+    margin-block:clamp(1.5rem,5vw,3rem);
+    font-weight:800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1s ease-out;
+  }
+  h2{
+    font-size:clamp(1.25rem,2.5vw,1.75rem);
+    font-weight:700;
+    margin-block:clamp(1rem,2.5vw,1.5rem);
+    padding-bottom:.5rem;
+    border-bottom:1px solid var(--neutral-brd);
+  }
+  .big-text   {font-size:clamp(2rem,6vw+1rem,3.5rem);}
+  .dis-text   {max-inline-size:68ch; margin-inline:auto; padding-inline:clamp(1rem,5vw,2rem);}
+  main{
+    max-width:1280px;
+    width:90%;
+    margin-inline:auto;
+    display:grid;
+    gap:clamp(1rem,4vw,2rem);
+  }
+  
+  /* Horizontal lists with snap scrolling */
+  .list,
+  .scroll-list,
+  .image-list,
+  .eyebrow-list{
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns:max-content;
+    gap:.75rem;
+    overflow-x:auto;
+    padding-inline:.5rem;
+    scroll-snap-type:x mandatory;
+  }
+  .list > *,
+  .scroll-list > *,
+  .image-list > *,
+  .eyebrow-list > *{scroll-snap-align:start;}
+
 
 .category {
     margin: 20px 0;
@@ -27,19 +104,30 @@ h1{
 }
 
 .button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: "DM Sans", sans-serif;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
+    color: var(--fg);
+    background: var(--neutral);
+    border: 1px solid var(--neutral-brd);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .button.selected {
-    background-color: #4CAF50;
+    background: var(--gradient);
     color: white;
+    border: none;
 }
 
 .generate-section {
@@ -78,31 +166,35 @@ h1{
 /* コード表示エリアのスタイル */
 .code-container {
     position: relative;
-    background-color: #282c34; /* 黒背景 */
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 4%;
+    background: var(--neutral);
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin-top: 2rem;
     text-align: left;
-    color: #fff; /* 白文字 */
-    font-family: monospace; /* 等幅フォントでコードっぽく */
+    color: var(--fg);
+    font-family: "DM Sans", monospace;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
 }
 
 /* Copyボタンのスタイル */
 .copy-btn {
     position: absolute;
-    top: 8px;
-    right: 10px;
-    padding: 5px 10px;
-    background-color: #007BFF; /* 青いボタン */
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--gradient);
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: var(--radius);
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /* Copyボタンのホバー時 */
 .copy-btn:hover {
-    background-color: #0056b3; /* 濃い青 */
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Copied!の表示 */
@@ -158,27 +250,54 @@ h1{
 }
 
 /* ボタンのスタイル */
-.button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    white-space: nowrap;
-}
+.button{
+    padding:.625rem 1.25rem;
+    font-size:1rem;
+    font-weight:600;
+    color:var(--fg);
+    background:var(--neutral);
+    border:1px solid var(--neutral-brd);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    white-space:nowrap;
+    cursor:pointer;
+    transition:background .15s, box-shadow .15s, transform .15s;
+  }
 
-.button:hover {
-    background-color: #e0e0e0;
-}
+  .button:hover,
+  .button:focus-visible{
+    background:var(--accent-ok);
+    box-shadow:var(--shadow-md);
+    transform:translateY(-2px);
+  }
+  .button.selected{
+    background:var(--accent-ok);
+    color:#fff;
+    border-color:transparent;
+  }
+  .button.selected:hover{background:#15803D;}
 
-.button.selected {
-    background-color: #4CAF50; /* 選択時に緑色に */
-    color: white;
-}
+
+  .list,
+  .scroll-list,
+  .image-list,
+  .eyebrow-list{
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns:max-content;
+    gap:.75rem;
+    overflow-x:auto;
+    padding-inline:.5rem;
+    scroll-snap-type:x mandatory;
+  }
+  .list > *,
+  .scroll-list > *,
+  .image-list > *,
+  .eyebrow-list > *{scroll-snap-align:start;}
+
 
 img.image {
-    width: 300px;
+    width: 215px;
     border-radius: 4px;
 }
 @media (max-width: 768px) {
@@ -191,7 +310,7 @@ img.image {
     display: flex;
     overflow-x: auto;
     gap: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 
 .scroll-list {
@@ -215,15 +334,15 @@ img.image {
     background-color: #4CAF50; /* 選択時の背景色（例: 緑） */
     color: white; /* 文字色を白に */
 }
-h2{
-    font-size: 28px;
-    margin-bottom: 20px;
-    font-weight: 700;                   
-    color: #333;                        
-    margin: 20px 0;                  
-    padding-bottom: 10px;               
-    border-bottom: 1px solid #ccc;     
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
-    letter-spacing: 0.5px;              
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
